@@ -1,7 +1,7 @@
 library(igraph)
 
 #load graph
-g = read.graph(file = "ESR_duplex/RED_5.graphml", format = "graphml")
+g = read.graph(file = file, format = "graphml")
 #make a new "relationship type" attribute named "tipo" for comfort
 E(g)$tipo = E(g)$"Relationship Type"
 #make a new attribute "peso" such that activation is +1, inhibition -3
