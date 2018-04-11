@@ -4,7 +4,7 @@ for(i in seq_along(tablas)){
   x = tablas[[i]][[2]]
   out_file = paste0(nomen, ".txt")
   cat(nomen, ncol(x) -1, sep = "\n",file = out_file)
-  y = ifelse(x<1, 0, 1)
+  y = ifelse(x==-3, 1, x)
   write.table(x = y, 
               file = out_file, 
               append = TRUE, 
