@@ -4,7 +4,8 @@ for(i in seq_along(tablas)){
   x = tablas[[i]][[2]]
   out_file = paste0(nomen, ".txt")
   cat(0, ncol(x) -1, sep = "\n",file = out_file)
-  y = ifelse(x==-3, 1, x)
+  y = x
+  y[y==-3] <- 1
   write.table(x = y, 
               file = out_file, 
               append = TRUE, 
